@@ -17,6 +17,14 @@
       <configure name="AHRS_PROPAGATE_FREQUENCY" value="100"/>
       <configure name="AHRS_CORRECT_FREQUENCY" value="100"/>
       <define name="AHRS_TRIGGERED_ATTITUDE_LOOP"/>
+<!--
+      <define name="AGR_CLIMB"/>
+-->
+      <define name="USE_I2C1"/>
+      <define name="USE_AIRSPEED"/>
+<!--
+    <define name="ALT_KALMAN"/>
+-->
     </target>
 
     <target name="sim" 			board="pc"/>
@@ -132,6 +140,16 @@
     <define name="AUTO_PITCH_MAX_PITCH" value="25" unit="deg"/>
     <define name="AUTO_PITCH_MIN_PITCH" value="-25" unit="deg"/>
     <define name="THROTTLE_SLEW" value="1.0"/>
+
+<!--
+    <define name="AUTO_AIRSPEED_SETPOINT" value="14.5" unit="m/s"/>
+-->
+    <define name="AUTO_AIRSPEED_SETPOINT" value="10" unit="m/s"/>
+    <define name="AUTO_AIRSPEED_PGAIN" value="0.060"/>
+    <define name="AUTO_AIRSPEED_IGAIN" value="0.050"/>
+    <define name="AUTO_GROUNDSPEED_SETPOINT" value="6.0" unit="m/s"/>
+    <define name="AUTO_GROUNDSPEED_PGAIN" value="0.75"/>
+    <define name="AUTO_GROUNDSPEED_IGAIN" value="0.25"/>
   </section>
 
   <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
@@ -156,6 +174,9 @@
   </section>
 
   <modules>
+    <load name="airspeed_ets.xml">
+      <define name="AIRSPEED_ETS_I2C_DEV" value="i2c1"/>
+    </load>
     <load name="sys_mon.xml"/>
     <load name="gps_ubx_ucenter.xml"/>
   </modules>

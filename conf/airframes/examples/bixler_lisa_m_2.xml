@@ -20,7 +20,7 @@
 <!--
       <define name="AGR_CLIMB"/>
 -->
-      <define name="USE_I2C1"/>
+      <define name="USE_I2C2"/>
       <define name="USE_AIRSPEED"/>
 <!--
     <define name="ALT_KALMAN"/>
@@ -175,7 +175,7 @@
 
   <modules>
     <load name="airspeed_ets.xml">
-      <define name="AIRSPEED_ETS_I2C_DEV" value="i2c1"/>
+      <define name="AIRSPEED_ETS_I2C_DEV" value="i2c2"/>
     </load>
     <load name="sys_mon.xml"/>
     <load name="gps_ubx_ucenter.xml"/>

@@ -66,7 +66,7 @@
     <servo name="THROTTLE"      no="1" min="1120" neutral="1120" max="1920"/>
     <servo name="ELEVATOR"      no="2" min="1900" neutral="1539" max="1100"/>
     <servo name="RUDDER"        no="3" min="950"  neutral="1440" max="2050"/>
-    <servo name="AILERON_RIGHT" no="4" min="2000" neutral="1500" max="1000"/>
+    <servo name="AILERON_RIGHT" no="4" min="1000" neutral="1500" max="2000"/>
     <servo name="AILERON_LEFT"  no="5" min="2000" neutral="1500" max="1000"/>
 
   </servos>
